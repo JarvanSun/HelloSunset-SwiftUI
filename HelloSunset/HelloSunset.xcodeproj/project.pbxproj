@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F447D8E7284EF8B1008FFD74 /* SuntimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D8E6284EF8B1008FFD74 /* SuntimeManager.swift */; };
+		F447D8E9284EF8B9008FFD74 /* SuntimeManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D8E8284EF8B9008FFD74 /* SuntimeManaging.swift */; };
+		F447D8EB284EFAC8008FFD74 /* SunsetDependencyResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D8EA284EFAC8008FFD74 /* SunsetDependencyResolving.swift */; };
+		F447D8ED284EFB0B008FFD74 /* SunsetDependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D8EC284EFB0B008FFD74 /* SunsetDependencyResolver.swift */; };
+		F447D8EF284EFBD6008FFD74 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D8EE284EFBD6008FFD74 /* DateTools.swift */; };
 		F4690403283E69B7003E8B4C /* LocationManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4690402283E69B7003E8B4C /* LocationManaging.swift */; };
 		F4690405283E69F7003E8B4C /* SunsetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4690404283E69F7003E8B4C /* SunsetViewModel.swift */; };
 		F4690407283E6A06003E8B4C /* SunsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4690406283E6A06003E8B4C /* SunsetView.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F447D8E6284EF8B1008FFD74 /* SuntimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuntimeManager.swift; sourceTree = "<group>"; };
+		F447D8E8284EF8B9008FFD74 /* SuntimeManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuntimeManaging.swift; sourceTree = "<group>"; };
+		F447D8EA284EFAC8008FFD74 /* SunsetDependencyResolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetDependencyResolving.swift; sourceTree = "<group>"; };
+		F447D8EC284EFB0B008FFD74 /* SunsetDependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetDependencyResolver.swift; sourceTree = "<group>"; };
+		F447D8EE284EFBD6008FFD74 /* DateTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
 		F4690402283E69B7003E8B4C /* LocationManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManaging.swift; sourceTree = "<group>"; };
 		F4690404283E69F7003E8B4C /* SunsetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewModel.swift; sourceTree = "<group>"; };
 		F4690406283E6A06003E8B4C /* SunsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetView.swift; sourceTree = "<group>"; };
@@ -48,6 +58,8 @@
 				F4C0077F283E1ABD00954977 /* ContentView.swift */,
 				F4690404283E69F7003E8B4C /* SunsetViewModel.swift */,
 				F4690406283E6A06003E8B4C /* SunsetView.swift */,
+				F447D8EA284EFAC8008FFD74 /* SunsetDependencyResolving.swift */,
+				F447D8EC284EFB0B008FFD74 /* SunsetDependencyResolver.swift */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -93,6 +105,9 @@
 			children = (
 				F4C00792283E315E00954977 /* LocaltionManager.swift */,
 				F4690402283E69B7003E8B4C /* LocationManaging.swift */,
+				F447D8E6284EF8B1008FFD74 /* SuntimeManager.swift */,
+				F447D8E8284EF8B9008FFD74 /* SuntimeManaging.swift */,
+				F447D8EE284EFBD6008FFD74 /* DateTools.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -197,12 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F447D8EF284EFBD6008FFD74 /* DateTools.swift in Sources */,
 				F4690403283E69B7003E8B4C /* LocationManaging.swift in Sources */,
 				F4C00780283E1ABD00954977 /* ContentView.swift in Sources */,
+				F447D8EB284EFAC8008FFD74 /* SunsetDependencyResolving.swift in Sources */,
 				F4690407283E6A06003E8B4C /* SunsetView.swift in Sources */,
+				F447D8ED284EFB0B008FFD74 /* SunsetDependencyResolver.swift in Sources */,
 				F4690405283E69F7003E8B4C /* SunsetViewModel.swift in Sources */,
+				F447D8E7284EF8B1008FFD74 /* SuntimeManager.swift in Sources */,
 				F4C00793283E315E00954977 /* LocaltionManager.swift in Sources */,
 				F4C0077E283E1ABD00954977 /* AppEntry.swift in Sources */,
+				F447D8E9284EF8B9008FFD74 /* SuntimeManaging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

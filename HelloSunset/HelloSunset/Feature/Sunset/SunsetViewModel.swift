@@ -10,27 +10,44 @@ import CoreLocation
 import Solar
 
 final class SunsetViewModel: ObservableObject {
-    let locationManager: LocationManaging
-    @Published var sunsetTime: Date?
-    @Published var sunriseTime: Date?
+    @Published var sunsetToday: Date?
+    @Published var sunsetWeeks: [Date]?
+    @Published var sunsetCountdown: String = ""
+    @Published var coordinate: CLLocationCoordinate2D?
     
-    private var cancellables = Set<AnyCancellable>()
+    private let resolver: SunsetDependencyResolving
+    private var cancellables: Set<AnyCancellable> = []
     
-    init(_ locationManager: LocationManaging = LocationManager()) {
-        self.locationManager = locationManager
+    init(resolver: SunsetDependencyResolving = SunsetDependencyResolver()) {
+        self.resolver = resolver
         
-        addObservers()
+        start()
     }
     
-    private func addObservers() {
-        self.locationManager.locationPublisher
-            .sink { local in
-                if let sunset = Solar(for: Date(), coordinate: local.coordinate)?.sunset
-                {
-                    self.sunsetTime = sunset
-                }
+    private func start() {
+        register()
+        resolver.locationManager.startUpdatingLocation()
+    }
+    
+    func register() {
+        resolver.locationManager.locationPublisher
+            .map { $0.coordinate }
+            .assign(to: &$coordinate)
+        
+        $coordinate.sink { [weak self] coordinate in
+            if let coordinate = coordinate {
+                self?.resolver.suntimeManager.coordinate = coordinate
+                self?.sunsetToday = self?.resolver.suntimeManager.sunset(on: Date())
             }
-            .store(in: &cancellables)
+        }
+        .store(in: &cancellables)
+        
+        resolver.timer
+            .autoconnect()
+            .map { [weak self] _ in
+                self?.sunsetToday?.timeIntervalSince(Date()).HHmmss() ?? ""
+            }
+            .assign(to: &$sunsetCountdown)
     }
 }
 

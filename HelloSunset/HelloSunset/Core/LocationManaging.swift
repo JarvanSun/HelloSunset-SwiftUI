@@ -11,4 +11,6 @@ import Combine
 protocol LocationManaging {
     var authorizationStatusPublisher: PassthroughSubject<CLAuthorizationStatus, Never> { get }
     var locationPublisher: PassthroughSubject<CLLocation, Never> { get }
+    
+    func startUpdatingLocation()
 }
