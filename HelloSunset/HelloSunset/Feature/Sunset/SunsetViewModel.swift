@@ -11,7 +11,6 @@ import Solar
 
 final class SunsetViewModel: ObservableObject {
     @Published var sunsetToday: Date?
-    
     @Published var sunsetWeeks: [Date]?
     @Published var sunsetCountdown: String = ""
     @Published var coordinate: CLLocationCoordinate2D?
