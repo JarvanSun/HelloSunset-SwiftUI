@@ -16,7 +16,6 @@
 		F4690405283E69F7003E8B4C /* SunsetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4690404283E69F7003E8B4C /* SunsetViewModel.swift */; };
 		F4690407283E6A06003E8B4C /* SunsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4690406283E6A06003E8B4C /* SunsetView.swift */; };
 		F4C0077E283E1ABD00954977 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0077D283E1ABD00954977 /* AppEntry.swift */; };
-		F4C00780283E1ABD00954977 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0077F283E1ABD00954977 /* ContentView.swift */; };
 		F4C00782283E1ABE00954977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C00781283E1ABE00954977 /* Assets.xcassets */; };
 		F4C00785283E1ABE00954977 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C00784283E1ABE00954977 /* Preview Assets.xcassets */; };
 		F4C0078D283E308600954977 /* Solar in Frameworks */ = {isa = PBXBuildFile; productRef = F4C0078C283E308600954977 /* Solar */; };
@@ -34,7 +33,6 @@
 		F4690406283E6A06003E8B4C /* SunsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetView.swift; sourceTree = "<group>"; };
 		F4C0077A283E1ABD00954977 /* HelloSunset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSunset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C0077D283E1ABD00954977 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
-		F4C0077F283E1ABD00954977 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4C00781283E1ABE00954977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4C00784283E1ABE00954977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4C00792283E315E00954977 /* LocaltionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaltionManager.swift; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 		F4690408283E6A0B003E8B4C /* Sunset */ = {
 			isa = PBXGroup;
 			children = (
-				F4C0077F283E1ABD00954977 /* ContentView.swift */,
 				F4690404283E69F7003E8B4C /* SunsetViewModel.swift */,
 				F4690406283E6A06003E8B4C /* SunsetView.swift */,
 				F447D8EA284EFAC8008FFD74 /* SunsetDependencyResolving.swift */,
@@ -214,7 +211,6 @@
 			files = (
 				F447D8EF284EFBD6008FFD74 /* DateTools.swift in Sources */,
 				F4690403283E69B7003E8B4C /* LocationManaging.swift in Sources */,
-				F4C00780283E1ABD00954977 /* ContentView.swift in Sources */,
 				F447D8EB284EFAC8008FFD74 /* SunsetDependencyResolving.swift in Sources */,
 				F4690407283E6A06003E8B4C /* SunsetView.swift in Sources */,
 				F447D8ED284EFB0B008FFD74 /* SunsetDependencyResolver.swift in Sources */,
