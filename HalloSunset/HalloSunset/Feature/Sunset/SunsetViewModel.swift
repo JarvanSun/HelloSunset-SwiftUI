@@ -7,7 +7,6 @@
 
 import Combine
 import CoreLocation
-import Solar
 
 final class SunsetViewModel: ObservableObject {
     @Published var sunsetToday: Date?

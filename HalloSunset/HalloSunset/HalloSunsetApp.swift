@@ -1,8 +1,8 @@
 //
-//  AppEntry.swift
-//  HelloSunset
+//  HalloSunsetApp.swift
+//  HalloSunset
 //
-//  Created by JarvanSun on 2022/5/25.
+//  Created by Jiawen Sun on 14.08.24.
 //
 
 import SwiftUI
