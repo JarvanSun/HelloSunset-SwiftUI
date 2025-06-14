@@ -1,47 +1,12 @@
 //
-//  HalloSunsetApp.swift
+//  ModernSunriseView.swift
 //  HalloSunset
 //
-//  Created by Jiawen Sun on 14.08.24.
+//  Created by Claude on 2025/06/14.
 //
 
 import SwiftUI
 import CoreLocation
-
-@main
-struct AppEntry: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
-
-struct ContentView: View {
-    @StateObject private var locationManager = LocationManager()
-    private let suntimeManager = SuntimeManager()
-    
-    var body: some View {
-        TabView {
-            ModernSunriseView(locationManager: locationManager, suntimeManager: suntimeManager)
-                .tabItem {
-                    Image(systemName: "sunrise.fill")
-                    Text("Sunrise")
-                }
-            
-            SunsetView(viewModel: SunsetViewModel())
-                .tabItem {
-                    Image(systemName: "sunset.fill")
-                    Text("Sunset")
-                }
-        }
-        .onAppear {
-            locationManager.startUpdatingLocation()
-        }
-    }
-}
-
-// MARK: - Modern Sunrise View
 
 struct ModernSunriseView: View {
     @ObservedObject var locationManager: LocationManager
@@ -94,7 +59,7 @@ struct ModernSunriseView: View {
             Text("SUNRISE")
                 .font(.system(.caption, design: .rounded, weight: .semibold))
                 .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5))
-                .kerning(2)
+                .letterSpacing(2)
                 .opacity(hasAppeared ? 1 : 0)
                 .animation(.easeOut(duration: 0.6).delay(0.2), value: hasAppeared)
             
@@ -160,7 +125,7 @@ struct ModernSunriseView: View {
                     Text("TIME REMAINING")
                         .font(.system(.caption2, design: .rounded, weight: .medium))
                         .foregroundColor(.secondary)
-                        .kerning(1)
+                        .letterSpacing(1)
                     
                     Text(countdown)
                         .font(.system(size: 24, weight: .medium, design: .monospaced))
@@ -232,7 +197,7 @@ struct ModernSunriseView: View {
     }
     
     private func updateProgress() {
-        guard sunriseTime != nil else {
+        guard let sunrise = sunriseTime else {
             progress = 0
             return
         }
@@ -247,3 +212,14 @@ struct ModernSunriseView: View {
         progress = min(elapsedInterval / totalDayInterval, 1.0)
     }
 }
+
+#if DEBUG
+struct ModernSunriseView_Previews: PreviewProvider {
+    static var previews: some View {
+        ModernSunriseView(
+            locationManager: LocationManager(),
+            suntimeManager: SuntimeManager()
+        )
+    }
+}
+#endif
