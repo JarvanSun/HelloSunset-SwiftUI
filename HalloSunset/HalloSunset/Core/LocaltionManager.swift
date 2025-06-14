@@ -8,7 +8,7 @@
 import CoreLocation
 import Combine
 
-class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
+class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate, ObservableObject {
     let authorizationStatusPublisher = PassthroughSubject<CLAuthorizationStatus, Never>()
     let locationPublisher = PassthroughSubject<CLLocation, Never>()
 

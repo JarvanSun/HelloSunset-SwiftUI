@@ -15,4 +15,8 @@ protocol SuntimeManaging {
     func sunset(on dates: [Date]) -> [Date?]?
     func sunrise(on date: Date) -> Date?
     func sunrise(on dates: [Date]) -> [Date?]?
+    
+    // New methods with coordinate parameter
+    func sunset(on date: Date, coordinate: CLLocationCoordinate2D) -> Date?
+    func sunrise(on date: Date, coordinate: CLLocationCoordinate2D) -> Date?
 }

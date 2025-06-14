@@ -47,5 +47,15 @@ struct SuntimeManager: SuntimeManaging {
             Solar(for: $0, coordinate: coordinate)?.sunrise
         }
     }
+    
+    // MARK: - New methods with coordinate parameter
+    
+    func sunset(on date: Date, coordinate: CLLocationCoordinate2D) -> Date? {
+        return Solar(for: date, coordinate: coordinate)?.sunset
+    }
+    
+    func sunrise(on date: Date, coordinate: CLLocationCoordinate2D) -> Date? {
+        return Solar(for: date, coordinate: coordinate)?.sunrise
+    }
 }
 
